@@ -2,6 +2,11 @@
 // ELITE SPINE — Script.js  (Final version)
 // ============================================================
 
+// ── WHATSAPP QUICK REPLY TEMPLATES ───────────
+function openWATemplate(message) {
+  window.open('https://wa.me/919022736809?text=' + encodeURIComponent(message), '_blank');
+}
+
 // ── SCROLL PROGRESS BAR ──────────────────────
 const progressBar = document.createElement('div');
 progressBar.className = 'scroll-progress';
