@@ -169,16 +169,48 @@ const bookingForm = document.getElementById('bookingForm');
 const today = new Date();
 if (dateInput) dateInput.min = today.toISOString().split('T')[0];
 
+const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
 function formatTime(hour) {
   const period = hour >= 12 ? 'PM' : 'AM';
   return `${hour % 12 || 12}:00 ${period}`;
 }
 
+function updateDayHint(date) {
+  const hint = document.getElementById('dayHint');
+  if (!hint || !date) return;
+  const d = new Date(date + 'T00:00:00');
+  const day = DAYS[d.getDay()];
+  const hours = d.getDay() === 0 ? '9AM – 10PM' : '9AM – 8PM';
+  hint.textContent = `${day} • Clinic open ${hours}`;
+  hint.style.display = 'block';
+}
+
+function updateSummary() {
+  const summary = document.getElementById('bookingSummary');
+  const sumDate = document.getElementById('sumDate');
+  const sumTime = document.getElementById('sumTime');
+  if (!summary) return;
+  const dVal = dateInput?.value;
+  const tVal = timeInput?.value;
+  if (dVal && tVal) {
+    const d = new Date(dVal + 'T00:00:00');
+    sumDate.textContent = d.toLocaleDateString('en-IN', { weekday:'short', day:'numeric', month:'short', year:'numeric' });
+    sumTime.textContent = tVal;
+    summary.style.display = 'flex';
+  } else {
+    summary.style.display = 'none';
+  }
+}
+
 function generateSlots(date) {
+  const slotField = document.getElementById('slotField');
   if (!slotsDiv) return;
   slotsDiv.innerHTML = '';
   if (timeInput) timeInput.value = '';
-  if (!date) return;
+  updateSummary();
+  if (!date) { if (slotField) slotField.style.display = 'none'; return; }
+
   const day = new Date(date + 'T00:00:00').getDay();
   for (let h = 9; h <= (day === 0 ? 22 : 20); h++) {
     const btn = document.createElement('button');
@@ -189,12 +221,24 @@ function generateSlots(date) {
       slotsDiv.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       if (timeInput) timeInput.value = btn.textContent;
+      updateSummary();
     });
     slotsDiv.appendChild(btn);
   }
+  if (slotField) {
+    slotField.style.display = 'flex';
+    slotField.style.flexDirection = 'column';
+    slotField.style.gap = '8px';
+    setTimeout(() => slotField.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+  }
 }
 
-if (dateInput) dateInput.addEventListener('change', () => generateSlots(dateInput.value));
+if (dateInput) {
+  dateInput.addEventListener('change', () => {
+    generateSlots(dateInput.value);
+    updateDayHint(dateInput.value);
+  });
+}
 
 if (bookingForm) {
   bookingForm.addEventListener('submit', e => {
