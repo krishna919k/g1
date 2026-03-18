@@ -451,66 +451,163 @@
 
 <!-- BOOKING -->
 <section id="booking" class="section-booking">
+  <!-- Decorative blobs -->
+  <div class="booking-blob booking-blob-1"></div>
+  <div class="booking-blob booking-blob-2"></div>
+
   <div class="container">
-    <div class="booking-wrap">
-      <div class="booking-info">
-        <div class="section-label">Easy Booking</div>
-        <h2 class="section-title">Book Your <em>Appointment</em></h2>
-        <p>Select your preferred date and time slot, then confirm instantly via WhatsApp. We'll respond within minutes!</p>
-        <div class="booking-features">
-          <div class="bf-item"><span>⚡</span> Instant WhatsApp Confirmation</div>
-          <div class="bf-item"><span>🕐</span> Mon–Sat: 9AM – 8PM</div>
-          <div class="bf-item"><span>🌙</span> Sunday: 9AM – 10PM</div>
-          <div class="bf-item"><span>🏠</span> Home Visits on Request</div>
-        </div>
-        <div class="booking-contact-quick">
-          <a href="tel:+919022736809" class="bq-link">📞 +91 90227 36809</a>
-          <a href="https://wa.me/919022736809" class="bq-link" target="_blank">💬 WhatsApp</a>
-        </div>
-      </div>
-      <div class="booking-form-wrap">
-        <form id="bookingForm" class="booking-form">
-          <div class="form-header">
-            <div class="form-logo">
-              <img src="p1.jpeg" alt="Elite Spine" class="form-logo-img">
-              <div><strong>Elite Spine</strong><span>Physiotherapy Clinic</span></div>
+    <div class="booking-header-center">
+      <div class="section-label center">Easy Booking</div>
+      <h2 class="section-title center">Book Your <em>Appointment</em></h2>
+      <p class="booking-tagline">3 simple steps — pick a date, choose a time, confirm on WhatsApp. Done!</p>
+    </div>
+
+    <div class="booking-wrap-new">
+
+      <!-- LEFT: steps + info -->
+      <div class="booking-left">
+        <div class="booking-steps">
+          <div class="bstep">
+            <div class="bstep-num">1</div>
+            <div class="bstep-text">
+              <strong>Pick Your Date</strong>
+              <span>Choose any available day</span>
             </div>
           </div>
-          <div class="form-field">
-            <label>Your Name</label>
-            <input type="text" id="patientName" placeholder="Enter your full name" required>
+          <div class="bstep-line"></div>
+          <div class="bstep">
+            <div class="bstep-num">2</div>
+            <div class="bstep-text">
+              <strong>Select a Time Slot</strong>
+              <span>Morning, afternoon or evening</span>
+            </div>
           </div>
-          <div class="form-field">
-            <label>Select Date</label>
-            <input type="date" id="date" required>
-            <small class="field-note">Mon–Sat: 9AM–8PM &nbsp;•&nbsp; Sunday: 9AM–10PM</small>
+          <div class="bstep-line"></div>
+          <div class="bstep">
+            <div class="bstep-num">3</div>
+            <div class="bstep-text">
+              <strong>Confirm on WhatsApp</strong>
+              <span>We reply within minutes!</span>
+            </div>
           </div>
-          <div class="form-field">
-            <label>Select Time Slot</label>
-            <div id="slots" class="slots-grid"></div>
-            <input type="hidden" id="time" required>
-          </div>
-          <div class="form-field">
-            <label>Reason for Visit <span class="optional">(optional)</span></label>
-            <select id="reason">
-              <option value="">Select a reason...</option>
-              <option>Back / Neck Pain</option>
-              <option>Joint Pain</option>
-              <option>Sports Injury</option>
-              <option>Post-Surgery Rehab</option>
-              <option>Dry Needling / Cupping</option>
-              <option>Neurological Condition</option>
-              <option>Home Visit</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <button type="submit" class="submit-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Confirm via WhatsApp
-          </button>
-          <p class="form-disclaimer">You'll be redirected to WhatsApp to confirm your slot. We respond within minutes.</p>
-        </form>
+        </div>
+
+        <div class="booking-hours-card">
+          <h4>🕐 Clinic Hours</h4>
+          <div class="bh-row"><span>Mon – Sat</span><strong>9:00 AM – 8:00 PM</strong></div>
+          <div class="bh-row"><span>Sunday</span><strong>9:00 AM – 10:00 PM</strong></div>
+          <div class="bh-row bh-home"><span>🏠 Home Visits</span><strong>On Request</strong></div>
+        </div>
+
+        <div class="booking-trust">
+          <div class="bt-item"><span class="bt-icon">⚡</span><span>Instant confirmation</span></div>
+          <div class="bt-item"><span class="bt-icon">🔒</span><span>No payment needed to book</span></div>
+          <div class="bt-item"><span class="bt-icon">✅</span><span>Free first consultation</span></div>
+        </div>
+
+        <div class="booking-quick-contact">
+          <a href="tel:+919022736809" class="bqc-btn bqc-call">
+            <span>📞</span> Call Us
+          </a>
+          <a href="https://wa.me/919022736809" class="bqc-btn bqc-wa" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
       </div>
+
+      <!-- RIGHT: form card -->
+      <div class="booking-right">
+        <div class="booking-form-card">
+
+          <!-- Form top strip -->
+          <div class="bfc-strip">
+            <img src="p1.jpeg" alt="Elite Spine" class="bfc-logo">
+            <div class="bfc-strip-text">
+              <strong>Elite Spine Physiotherapy</strong>
+              <span>Pernem, Goa • +91 90227 36809</span>
+            </div>
+            <div class="bfc-online">
+              <span class="bfc-dot"></span> Available
+            </div>
+          </div>
+
+          <form id="bookingForm">
+
+            <!-- Step 1: Name -->
+            <div class="bfc-field">
+              <label class="bfc-label">
+                <span class="bfc-step-tag">1</span>
+                Your Name
+              </label>
+              <div class="bfc-input-wrap">
+                <span class="bfc-input-icon">👤</span>
+                <input type="text" id="patientName" placeholder="Enter your full name" required>
+              </div>
+            </div>
+
+            <!-- Step 2: Date -->
+            <div class="bfc-field">
+              <label class="bfc-label">
+                <span class="bfc-step-tag">2</span>
+                Choose Date
+              </label>
+              <div class="bfc-input-wrap">
+                <span class="bfc-input-icon">📅</span>
+                <input type="date" id="date" required>
+              </div>
+              <div class="bfc-day-hint" id="dayHint"></div>
+            </div>
+
+            <!-- Step 3: Time -->
+            <div class="bfc-field" id="slotField" style="display:none">
+              <label class="bfc-label">
+                <span class="bfc-step-tag">3</span>
+                Pick a Time Slot
+              </label>
+              <div id="slots" class="slots-grid-new"></div>
+              <input type="hidden" id="time" required>
+            </div>
+
+            <!-- Step 4: Reason -->
+            <div class="bfc-field">
+              <label class="bfc-label">
+                <span class="bfc-step-tag optional-tag">?</span>
+                Reason for Visit
+                <span class="bfc-optional">(optional)</span>
+              </label>
+              <div class="bfc-input-wrap bfc-select-wrap">
+                <span class="bfc-input-icon">🩺</span>
+                <select id="reason">
+                  <option value="">Select a reason...</option>
+                  <option>Back / Neck Pain</option>
+                  <option>Joint Pain</option>
+                  <option>Sports Injury</option>
+                  <option>Post-Surgery Rehab</option>
+                  <option>Dry Needling / Cupping</option>
+                  <option>Neurological Condition</option>
+                  <option>Home Visit</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Selected summary -->
+            <div class="bfc-summary" id="bookingSummary" style="display:none">
+              <div class="bfc-sum-row"><span>📅</span><strong id="sumDate">—</strong></div>
+              <div class="bfc-sum-row"><span>🕐</span><strong id="sumTime">—</strong></div>
+            </div>
+
+            <button type="submit" class="bfc-submit-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Confirm via WhatsApp
+            </button>
+            <p class="bfc-disclaimer">Opens WhatsApp with your details pre-filled. We confirm within minutes!</p>
+          </form>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -546,91 +643,6 @@
         <a href="https://www.instagram.com/elitespine_goa?igsh=MWNib3hjcHA0ejhwZw==" target="_blank" class="cc-link">@elitespine_goa →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- WHATSAPP QUICK REPLIES -->
-<section class="section-wa-replies" id="wa-replies">
-  <div class="container">
-    <div class="section-label center">For Dr. Krupali</div>
-    <h2 class="section-title center">WhatsApp Quick <em>Replies</em></h2>
-    <p class="section-sub center">Tap any template to open WhatsApp with the message pre-filled — edit as needed and send in one tap.</p>
-    <div class="war-grid">
-
-      <div class="war-card">
-        <div class="war-icon">✅</div>
-        <h4>Confirm Appointment</h4>
-        <p>Hi [Name], your appointment at Elite Spine is confirmed for [Date] at [Time]. See you then! 😊</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! Your appointment at Elite Spine Physiotherapy is confirmed for [Date] at [Time]. Please arrive 5 minutes early. See you then! 😊\n\n— Dr. Krupali Sawant\n📍 Bagliwada, Agarwada, Pernem, Goa')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">⏰</div>
-        <h4>Running Late</h4>
-        <p>Let your patient know you're running a few minutes behind schedule.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! I am running about 10-15 minutes late today. Apologies for the inconvenience — please be comfortable, I will be with you shortly! 🙏\n\n— Dr. Krupali')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">📅</div>
-        <h4>Book Next Session</h4>
-        <p>Remind a patient it's time to book their next physiotherapy session.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! Hope you are feeling better after your last session 😊 It is time to book your next appointment for continued progress. Reply here or visit our website to book a slot:\n\nhttps://elitespine.github.io/Elitespine-appointment-booking/\n\n— Dr. Krupali, Elite Spine')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">🏠</div>
-        <h4>Home Visit Confirmed</h4>
-        <p>Confirm a home visit appointment with address and time details.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! Your home visit is confirmed for [Date] at [Time]. I will be at your address: [Address]. Please ensure there is a clear space available for the session. See you soon!\n\n— Dr. Krupali Sawant PT\n📞 +91 90227 36809')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">❌</div>
-        <h4>Reschedule / Cancel</h4>
-        <p>Politely reschedule or cancel an appointment due to an emergency.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name], I sincerely apologize but I need to reschedule your appointment on [Date] due to an emergency. Would [New Date] at [New Time] work for you? Sorry for the inconvenience 🙏\n\n— Dr. Krupali')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">💊</div>
-        <h4>Post-Session Instructions</h4>
-        <p>Send exercise and care instructions after a treatment session.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! Great session today 💪 Here are your instructions:\n\n✅ Do your prescribed exercises [X] times daily\n✅ Apply ice/heat as advised for [X] minutes\n✅ Avoid [activity] for the next [X] days\n✅ Stay hydrated\n\nAny pain or concerns, message me anytime!\n\n— Dr. Krupali, Elite Spine')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">⭐</div>
-        <h4>Request a Review</h4>
-        <p>Ask a happy patient to leave a review on your website.</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! So glad to hear you are feeling better! 😊 If you have a moment, I would really appreciate if you could leave a quick review on our website — it helps others find the right care:\n\nhttps://elitespine.github.io/Elitespine-appointment-booking/#reviews\n\nThank you so much! 🙏\n— Dr. Krupali')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-      <div class="war-card">
-        <div class="war-icon">🎉</div>
-        <h4>Recovery Congratulations</h4>
-        <p>Celebrate a patient completing their recovery journey!</p>
-        <button class="war-btn" onclick="openWATemplate('Hi [Name]! Congratulations on completing your physiotherapy journey! 🎉 It has been a pleasure working with you. Remember to keep up with your home exercises and do not hesitate to reach out if you ever need us again!\n\nWishing you a healthy and pain-free life! 💪\n— Dr. Krupali, Elite Spine')">
-          Open in WhatsApp →
-        </button>
-      </div>
-
-    </div>
-    <p class="war-note">💡 <strong>Tip:</strong> Replace [Name], [Date], [Time] with the actual details before sending. These open in WhatsApp — you are not charged anything.</p>
   </div>
 </section>
 
